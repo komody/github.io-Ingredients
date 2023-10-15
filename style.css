@@ -1,0 +1,269 @@
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+header {
+  height: 80px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px;
+}
+header .humber-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+header .humber-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+header .humber-btn span:nth-child(1) {
+  top: 10px;
+}
+header .humber-btn span:nth-child(2) {
+  bottom: 10px;
+}
+header .humber-btn#close.hide {
+  opacity: 0;
+  display: none;
+}
+
+.humber-menu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.humber-menu ul {
+  top: 0;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+.humber-menu.show ul {
+  margin-top: 44px;
+  transform: translateX(0);
+}
+.humber-menu li {
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: all 0.5s;
+  padding: 8px;
+}
+.humber-menu.show {
+  background: #000;
+  z-index: 20;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+.humber-menu.show .humber-menu-posi {
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+}
+.humber-menu.show li {
+  transform: none;
+  opacity: 1;
+  color: white;
+  padding: 8px;
+}
+.humber-menu.show .humber-btn {
+  width: 30px;
+  height: 30px;
+  top: 44px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+.humber-menu.show .humber-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.humber-menu.show .humber-btn span:nth-child(1) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+.humber-menu.show .humber-btn span:nth-child(2) {
+  transform: translateY(-4px) rotate(45deg);
+}
+
+.footer {
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.footer ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer li {
+  font-size: 0.75rem;
+  margin-right: 24px;
+}
+
+.item1-footer {
+  bottom: 0;
+}
+
+.page2-footer {
+  bottom: 0;
+}
+
+.about-footer {
+  bottom: 0;
+}
+
+.top {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+.top .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.top .select-list {
+  width: 23%;
+  display: block;
+  margin-bottom: 40px;
+}
+.top img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.top .view-more {
+  margin: 40px 0;
+  display: block;
+  text-align: center;
+}
+
+.products .page-list {
+  display: flex;
+  justify-content: center;
+}
+.products .page-list li {
+  margin-left: 24px;
+}
+
+.item1 h1 {
+  margin-bottom: 30px;
+}
+.item1 img {
+  width: 100%;
+  height: 100%;
+}
+.item1 .item1-main {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.item1 .item1-img {
+  width: 50%;
+}
+.item1 .item1-text {
+  width: 42%;
+}
+.item1 p {
+  margin-bottom: 30px;
+}
+.item1 dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item1 dt {
+  width: 30%;
+}
+.item1 dd {
+  width: 70%;
+}
+.item1 .btp {
+  display: block;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.about h2 {
+  margin-bottom: 32px;
+}
+.about p {
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+
+.company .company-main {
+  max-width: 600px;
+}
+.company h1 {
+  margin-bottom: 40px;
+}
+.company dl {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 80pxpx;
+}
+.company dt {
+  width: 30%;
+  border-bottom: solid 1px gray;
+  padding: 20px 10px;
+}
+.company dd {
+  width: 70%;
+  border-bottom: solid 1px gray;
+  padding: 20px 10px;
+}
+.company .map {
+  padding-bottom: 80px;
+  filter: grayscale(1);
+  z-index: 1;
+}
+.company .map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+@media screen and (max-width: 900px) {
+  .top .select-list {
+    width: 47%;
+  }
+  .item1 .item1-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .item1 .item1-main .item1-img {
+    width: 100%;
+    max-width: 900px;
+  }
+  .item1 .item1-main .item1-text {
+    max-width: 600px;
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    position: unset;
+  }
+}/*# sourceMappingURL=style.css.map */
